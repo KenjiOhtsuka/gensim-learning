@@ -38,5 +38,17 @@ for doc in corpus_lsi:
 lsi.save(temp_file_path('model.lsi'))
 lsi = models.LsiModel.load(temp_file_path('model.lsi'))
 
+# Tf-Idf
 # model = models.TfidfModel(corpus, normalize=True)
+
+# Latent Semantic Index
 # model = models.LsiModel(tfidf_corpus, id2word=dictionary, num_topics=300)
+
+# Random Projection
+# model = models.RpModel(tfidf_corpus, num_topics=500)
+
+# Latent Dirichlet Algorithm
+# model = models.LdaModel(corpus, id2word=dictionary, num_topics=100)
+
+# Hierarchical Dirichlet Algorithm
+# model = models.HdpModel(corpus, id2word=dictionary)
