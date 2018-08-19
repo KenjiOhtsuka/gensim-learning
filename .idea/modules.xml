@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/gensim-learning.iml" filepath="$PROJECT_DIR$/.idea/gensim-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gensim-tutorial/gensim-tutorial.iml" filepath="$PROJECT_DIR$/gensim-tutorial/gensim-tutorial.iml" />
     </modules>
   </component>
 </project>
