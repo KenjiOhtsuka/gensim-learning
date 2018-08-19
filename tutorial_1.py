@@ -1,12 +1,15 @@
 from os import path
+import logging
+
 
 def temp_file_path(relative_path):
-    return path.dirname(__file__) + '/tmp/' + relative_path
+    return path.dirname(path.realpath(__file__)) + '/tmp/' + relative_path
 
-import logging
+
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 from gensim import corpora
+
 documents = [
     "Human machine interface for lab abc computer applications",
     "A survey of user opinion of computer system response time",
@@ -31,6 +34,7 @@ texts = [
 
 # remove words that appear only once
 from collections import defaultdict
+
 frequency = defaultdict(int)
 for text in texts:
     for token in text:
@@ -42,6 +46,7 @@ texts = [
 ]
 
 from pprint import pprint  # pretty-printer
+
 pprint(texts)
 
 dictionary = corpora.Dictionary(texts)
@@ -63,5 +68,6 @@ class MyCorpus(object):
         for line in open('mycorpus.txt'):
             # assume there's one document per line, tokens separated by whitespace
             yield dictionary.doc2bow(line.lower().split())
+
 
 corpus_memory_friendly = MyCorpus()
