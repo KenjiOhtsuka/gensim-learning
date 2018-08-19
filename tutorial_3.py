@@ -3,7 +3,7 @@ import logging
 
 
 def temp_file_path(relative_path):
-    return path.dirname(__file__) + '/tmp/' + relative_path
+    return path.dirname(path.realpath(__file__)) + '/tmp/' + relative_path
 
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)

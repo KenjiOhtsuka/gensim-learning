@@ -10,7 +10,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 
 from gensim import corpora, models, similarities
 
-if (path.exists(temp_file_path("deerwester.dict"))):
+if path.exists(temp_file_path("deerwester.dict")):
     dictionary = corpora.Dictionary.load(temp_file_path('deerwester.dict'))
     corpus = corpora.MmCorpus(temp_file_path('deerwester.mm'))
     print("Used files generated from first tutorial")
@@ -36,7 +36,7 @@ for doc in corpus_lsi:
     print(doc)
 
 lsi.save(temp_file_path('model.lsi'))
-lsi = model.LsiModel.load(temp_file_path('model.lsi'))
+lsi = models.LsiModel.load(temp_file_path('model.lsi'))
 
 # model = models.TfidfModel(corpus, normalize=True)
 # model = models.LsiModel(tfidf_corpus, id2word=dictionary, num_topics=300)
