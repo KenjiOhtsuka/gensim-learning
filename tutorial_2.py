@@ -18,8 +18,12 @@ else:
     print("Please run first tutorial to generate data set")
 
 ################################################################################
-# To bring out hidden structure in the corpus, discover relationships between words and use them to describe the documents in a new and (hopefully) more semantic way.
-# To make the document representation more compact. This both improves efficiency (new representation consumes less resources) and efficacy (marginal data trends are ignored, noise-reduction).
+# To bring out hidden structure in the corpus, discover relationships
+# between words and use them to describe the documents
+# in a new and (hopefully) more semantic way.
+# To make the document representation more compact.
+# This both improves efficiency (new representation consumes less resources)
+# and efficacy (marginal data trends are ignored, noise-reduction).
 ################################################################################
 
 tfidf = models.TfidfModel(corpus)
